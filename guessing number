@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{ srand (time(0));
+int random=rand() %100;
+int guess=0;
+cout <<"please enter the number that you guess:\n";
+while (guess!=random)
+{
+    cin >>guess;
+    if (guess>random){
+        cout << "bigger....\n";
+    }
+    else if (guess<random){
+        cout <<"smaller....\n";
+    }
+    else cout <<"finally you find the number.\n";
+}
+
+    return 0;
+}
